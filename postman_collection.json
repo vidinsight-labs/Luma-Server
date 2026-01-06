@@ -1,0 +1,386 @@
+{
+    "info": {
+      "name": "LumaServer API",
+      "description": "LumaServer API Collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+      {
+        "key": "base_url",
+        "value": "http://localhost:8000",
+        "type": "string"
+      }
+    ],
+    "item": [
+      {
+        "name": "Projects",
+        "item": [
+          {
+            "name": "Create Project",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Test Project\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/create-project/",
+                "host": ["{{base_url}}"],
+                "path": ["api", "create-project", ""]
+              }
+            }
+          },
+          {
+            "name": "Get Project List",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/get-project-list",
+                "host": ["{{base_url}}"],
+                "path": ["api", "get-project-list"]
+              }
+            }
+          },
+          {
+            "name": "Get Project Detail",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/get-project-detail/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "get-project-detail", "1"]
+              }
+            }
+          },
+          {
+            "name": "Update Project",
+            "request": {
+              "method": "PATCH",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Updated Project Name\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/update-project/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "update-project", "1"]
+              }
+            }
+          },
+          {
+            "name": "Delete Project",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "{{base_url}}/api/delete-project/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "delete-project", "1"]
+              }
+            }
+          },
+          {
+            "name": "Download Project",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/download-project/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "download-project", "1"]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Collections",
+        "item": [
+          {
+            "name": "Create Collection",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Test Collection\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/create-collection/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "create-collection", "1"]
+              }
+            }
+          },
+          {
+            "name": "Get Collection List",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/get-collection-list/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "get-collection-list", "1"]
+              }
+            }
+          },
+          {
+            "name": "Get Collection Detail",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/get-collection-detail/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "get-collection-detail", "1"]
+              }
+            }
+          },
+          {
+            "name": "Download Collection",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/download-collection/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "download-collection", "1"]
+              }
+            }
+          },
+          {
+            "name": "Delete Collection",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "{{base_url}}/api/delete-collection/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "delete-collection", "1"]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Files",
+        "item": [
+          {
+            "name": "Get File List by Collection",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/get-file-list/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "get-file-list", "1"]
+              }
+            }
+          },
+          {
+            "name": "Get File Detail",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/get-file-detail/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "get-file-detail", "1"]
+              }
+            }
+          },
+          {
+            "name": "Download File",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/download-file/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "download-file", "1"]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Devices",
+        "item": [
+          {
+            "name": "Add Device",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Device 1\",\n  \"ip\": \"192.168.1.100\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/add-device",
+                "host": ["{{base_url}}"],
+                "path": ["api", "add-device"]
+              }
+            }
+          },
+          {
+            "name": "Get Device List",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/get-device-list",
+                "host": ["{{base_url}}"],
+                "path": ["api", "get-device-list"]
+              }
+            }
+          },
+          {
+            "name": "Update Device",
+            "request": {
+              "method": "PATCH",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"name\": \"Updated Device Name\",\n  \"ip\": \"192.168.1.101\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/update-device/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "update-device", "1"]
+              }
+            }
+          },
+          {
+            "name": "Delete Device",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "{{base_url}}/api/delete-device/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "delete-device", "1"]
+              }
+            }
+          },
+          {
+            "name": "Reconnect Cameras",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "{{base_url}}/api/reconnect-cameras",
+                "host": ["{{base_url}}"],
+                "path": ["api", "reconnect-cameras"]
+              }
+            }
+          },
+          {
+            "name": "Delete All Photos",
+            "request": {
+              "method": "DELETE",
+              "url": {
+                "raw": "{{base_url}}/api/delete-all-photos",
+                "host": ["{{base_url}}"],
+                "path": ["api", "delete-all-photos"]
+              }
+            }
+          },
+          {
+            "name": "Reset Devices",
+            "request": {
+              "method": "POST",
+              "url": {
+                "raw": "{{base_url}}/api/reset-devices",
+                "host": ["{{base_url}}"],
+                "path": ["api", "reset-devices"]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Settings",
+        "item": [
+          {
+            "name": "Get Camera Setting",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/get-camera-setting",
+                "host": ["{{base_url}}"],
+                "path": ["api", "get-camera-setting"]
+              }
+            }
+          },
+          {
+            "name": "Update Camera Setting",
+            "request": {
+              "method": "PATCH",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"iso_speed\": \"400\",\n  \"shutter_speed\": \"1/250\",\n  \"aperture\": \"11\",\n  \"white_balance\": \"Daylight\",\n  \"image_format\": \"RAW\",\n  \"drive_mode\": \"Single\",\n  \"metering_mode\": \"Evaluative\",\n  \"picture_style\": \"Standard\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/update-camera-setting",
+                "host": ["{{base_url}}"],
+                "path": ["api", "update-camera-setting"]
+              }
+            }
+          },
+          {
+            "name": "Get Flash Setting",
+            "request": {
+              "method": "GET",
+              "url": {
+                "raw": "{{base_url}}/api/get-flash-setting",
+                "host": ["{{base_url}}"],
+                "path": ["api", "get-flash-setting"]
+              }
+            }
+          },
+          {
+            "name": "Update Flash Setting",
+            "request": {
+              "method": "PATCH",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"delay\": 300\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/update-flash-setting",
+                "host": ["{{base_url}}"],
+                "path": ["api", "update-flash-setting"]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
