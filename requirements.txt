@@ -1,4 +1,4 @@
 Django
-djangorestframewor
+djangorestframework
 django-cors-headers
 requests
